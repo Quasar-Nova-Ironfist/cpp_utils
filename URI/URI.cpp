@@ -14,7 +14,9 @@ URI::querySegment::querySegment(string str) {
 				if ((end = value.find("%20", start)) == string::npos)
 					end = value.size();
 			}
-			valueSegments.push_back(value.substr(start, end - start));
+			string tag = value.substr(start, end - start);
+			if (!tag.empty())
+				valueSegments.push_back(tag);
 			start = end + startIncrease;
 		}
 		valueSegments.shrink_to_fit();
