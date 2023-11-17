@@ -1,4 +1,4 @@
-#include "URI.h"
+#include "q/URI.h"
 using std::string;
 using namespace quasar;
 URI::querySegment::querySegment(string str) {
@@ -50,7 +50,7 @@ string URI::percentageEncode(string str) {
 		if (isalnum(c) || c == '-' || c == '_' || c == '.' || c == '~')
 			ss << c;
 		else
-			ss << '%' << std::hex << (int)c;
+			ss << '%' << std::hex << (int)c << std::dec;
 	}
 	return ss.str();
 }
