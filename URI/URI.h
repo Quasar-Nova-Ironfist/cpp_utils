@@ -1,4 +1,4 @@
-//have #define QUASAR_IMPLEMENTATION before including this file in one and only one source file to define the functions rather than just declare them. Done this way so as to make the entire thing just one header file.
+//have #define QUASAR_IMPLEMENTATION before including this file in one and only one source file to define the functions rather than just declare them. Done this way to allow for non-inline non-template header-only library.
 #ifndef QUASAR_URI_H
 #define QUASAR_URI_H
 #include <string>
